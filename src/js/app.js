@@ -1,8 +1,22 @@
 var app = new Framework7({
+  // App root element
   el: '#app',
-  name: 'App',
-  id: 'com.app.app',
+  // App Name
+  name: 'My App',
+  // App id
+  id: 'com.myapp.test',
+  // Enable swipe panel
   panel: {
     swipe: true,
-  }
+  },
+  // Add default routes
+  routes: [
+    {
+      path: '/about/',
+      url: 'pages/about.html',
+    },
+  ],
+  // ... other parameters
 });
+
+var mainView = app.views.create('.view-main');
